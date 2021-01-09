@@ -57,7 +57,7 @@ def remove_all_BR():
     #Open and write to a file
     file = open("sub_domain.txt","w")
     for word in sub_domain:
-        if '<BR>' not in word:
+        if '<BR>' and '--' and '@' not in word:
             file.write(word + '\n')
     file.close()
     
